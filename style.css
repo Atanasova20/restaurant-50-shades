@@ -4,7 +4,7 @@
 
 @layer base {
     body {    
-      @apply  bg-purple-300 text-green-900 text-center text-2xl;
+      @apply  bg-[#161718] text-green-900 text-center text-2xl;
   }
     
   }

@@ -1,3 +1,17 @@
+// Функция за зареждане на HTML от външен файл
+function loadHTML(elementId, fileName) {
+  fetch(fileName)
+      .then(response => response.text())
+      .then(data => document.getElementById(elementId).innerHTML = data)
+      .catch(error => console.error('Error loading file:', error));
+}
+
+// Зареждаме хедъра, навигацията и футъра
+loadHTML('header', 'header.html');
+loadHTML('footer', 'footer.html');
+
+
+
 // прихващане на класовете за промяна на хедъра при скролване
 window.addEventListener('scroll', function () {
   let header = document.getElementById('header');

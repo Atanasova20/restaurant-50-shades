@@ -2,9 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+/* за цвят на основен текст използвам #d9d9d9
+за хоувър на текста използвам hover:text-gray-400
+фон на страница bg-[#161718]
+text-[#98f4fa] towa e sinoito ot logoto
+shadow-gray-400 
+shadow-gray-800 
+shadow-gray-900 
+ border-[#98f4fa]
+
+ text-[#afb7bd]- zamestitel na gray-400
+*/
+
 @layer base {
-    body {    
-      @apply  bg-[#161718] text-green-900 text-center text-2xl;
+  body {
+    @apply text-balance bg-[#161718] font-serif text-[#d9d9d9];
   }
-    
+
+  h1 {
+    @apply text-5xl font-semibold contrast-200;
   }
+
+  h2 {
+    @apply text-4xl contrast-200;
+  }
+
+  h3 {
+    @apply text-3xl contrast-200;
+  }
+
+  h4 {
+    @apply text-xl contrast-200;
+  }
+
+  p {
+    @apply text-base font-bold contrast-200;
+  }
+}
+
+@layer components {
+  .logo {
+    @apply w-28;
+  }
+
+  .reservation-btn {
+    @apply border-y-2 border-gray-400 bg-transparent p-3 text-[#98f4fa] transition-all duration-700 hover:border-[#98f4fa] hover:bg-[#2a2c2e] hover:text-gray-300;
+  }
+
+  .button {
+    @apply border-2 border-gray-400 bg-transparent p-3 font-extrabold text-gray-400 transition-all duration-700 hover:border-[#98f4fa] hover:text-[#98f4fa];
+  }
+
+  .button-book-a-table {
+    @apply mt-5 border-2 border-gray-400 bg-transparent p-3 font-extrabold text-[#98f4fa] transition-all duration-700 hover:border-[#98f4fa] hover:text-gray-300;
+  }
+
+  .content-box {
+    @apply flex flex-col space-y-5 bg-[#14151653] p-5 text-start transition-all duration-700 hover:text-[#98f4fa] hover:shadow-xl hover:shadow-black;
+  }
+
+  .select {
+    @apply w-full border-b-2 border-[#1b1c1d] bg-[#14151680] p-3;
+  }
+
+  .option {
+    @apply border-2 border-[#141516ea] bg-[#141516ea] p-3 text-[#98f4fa];
+  }
+}
